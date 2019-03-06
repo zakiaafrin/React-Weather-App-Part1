@@ -4,52 +4,6 @@ import ReactDOM from 'react-dom';
 import axios from 'axios';
 import './App.css';
 
-// function Index() {
-//   return (
-//     <div class="w3-display-container w3-text-black">
-//       <h1>Current Weather</h1>
-//     <h3 class="w3-xlarge w3-display-bottomleft w3-padding">LONDON 60&deg; F</h3>
-//     </div>
-//     );
-// }
-
-// function Details() {
-//   return <h2>Details</h2>;
-// }
-
-// function Hourly() {
-//   return <h2>Hourly</h2>;
-// }
-
-// function AppRouter() {
-//   return (
-//     <Router>
-//       <div>
-//         <nav>
-//           <ul className="ul">
-//             <li>
-//               <Link to="/">
-//               Current Weather
-//               </Link>
-//             </li>
-//             <li>
-//               <Link to="/Details/">Details</Link>
-//             </li>
-//             <li>
-//               <Link to="/Hourly/">Hourly</Link>
-//             </li>
-//           </ul>
-//         </nav>
-
-//         <Route path="/" exact component={Index} />
-//         <Route path="/Details/" component={Details} />
-//         <Route path="/Hourly/" component={Hourly} />
-//       </div>
-//     </Router>
-//   );
-// }
-
-// export default AppRouter;
 class App extends React.Component {
   constructor(props) {
     super(props);
@@ -361,3 +315,51 @@ class App extends React.Component {
 export default App;
 
 ReactDOM.render(<App />, document.getElementById("root"));
+
+
+// function Index() {
+//   return (
+//     <div class="w3-display-container w3-text-black">
+//       <h1>Current Weather</h1>
+//     <h3 class="w3-xlarge w3-display-bottomleft w3-padding">LONDON 60&deg; F</h3>
+//     </div>
+//     );
+// }
+
+// function Details() {
+//   return <h2>Details</h2>;
+// }
+
+// function Hourly() {
+//   return <h2>Hourly</h2>;
+// }
+
+// function AppRouter() {
+//   return (
+//     <Router>
+//       <div>
+//         <nav>
+//           <ul className="ul">
+//             <li>
+//               <Link to="/">
+//               Current Weather
+//               </Link>
+//             </li>
+//             <li>
+//               <Link to="/Details/">Details</Link>
+//             </li>
+//             <li>
+//               <Link to="/Hourly/">Hourly</Link>
+//             </li>
+//           </ul>
+//         </nav>
+
+//         <Route path="/" exact component={Index} />
+//         <Route path="/Details/" component={Details} />
+//         <Route path="/Hourly/" component={Hourly} />
+//       </div>
+//     </Router>
+//   );
+// }
+
+// export default AppRouter;
