@@ -34,15 +34,15 @@ class App extends React.Component {
       });
 
       const currentData = this.currentData();
-      const dayOfWeek = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+      const dayOfWeek = ["Sat", "Sun", "Mon", "Tue", "Wed", "Thu", "Fri"];
       const dayOfWeekFull = [
+        "Saturday",
         "Sunday",
         "Monday",
         "Tuesday",
         "Wednesday",
         "Thursday",
-        "Friday",
-        "Saturday"
+        "Friday"
       ];
       const currentDay = "Today";
       const currentDayFull =
