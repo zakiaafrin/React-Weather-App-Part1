@@ -1,8 +1,7 @@
 import React from "react";
-import ReactDOM from 'react-dom';
-// import { BrowserRouter as Router, Route, Link } from "react-router-dom";
-import axios from 'axios';
-import './App.css';
+import ReactDOM from "react-dom";
+import axios from "axios";
+import "./App.css";
 
 class App extends React.Component {
   constructor(props) {
@@ -53,7 +52,10 @@ class App extends React.Component {
       const currentHumidity = Math.round(currentData.main.humidity);
       const currentPressure = Math.round(currentData.main.pressure);
       const currentWind = Math.round(currentData.wind.speed);
-      const currentWeather = currentData.weather[0].main === "Clouds" ? "Cloudy" : currentData.weather[0].main;
+      const currentWeather =
+        currentData.weather[0].main === "Clouds"
+          ? "Cloudy"
+          : currentData.weather[0].main;
       const currentIcon = this.convertWeatherIcons(currentData.weather[0].main);
 
       const days = [];
@@ -215,7 +217,6 @@ class App extends React.Component {
       <div className={"widget ".concat(...background)}>
         <form onSubmit={this.changeLocation}>
           <div className="inline-input">
-            {/* <i className="mdi mdi-magnify"></i> */}
             <input
               className="location-input"
               defaultValue={location}
@@ -223,7 +224,8 @@ class App extends React.Component {
               ref={input => (this.locationInput = input)}
             />
           </div>
-        </form><hr />
+        </form>
+        <hr />
 
         <div className="main-display">
           <div className="main-info">
@@ -232,29 +234,41 @@ class App extends React.Component {
           </div>
 
           <div className="sub-info">
-            <div className="sub-info-title">{daysFull[displayIndex]}</div><hr />
+            <div className="sub-info-title">{daysFull[displayIndex]}</div>
+            <hr />
 
-            <div className="sub-info-text"><b>Description : </b>{weather[displayIndex]}</div>
-            <div className="sub-info-text"><b>Humidity : </b>{c_humidity[displayIndex]}%</div>
-            <div className="sub-info-text"><b>Pressure : </b>{c_pressure[displayIndex]} Pa</div>
-            <div className="sub-info-text"><b>Wind-Speed : </b>{c_wind[displayIndex]} km/s</div>
+            <div className="sub-info-text">
+              <b>Description : </b>
+              {weather[displayIndex]}
+            </div>
+            <div className="sub-info-text">
+              <b>Humidity : </b>
+              {c_humidity[displayIndex]}%
+            </div>
+            <div className="sub-info-text">
+              <b>Pressure : </b>
+              {c_pressure[displayIndex]} Pa
+            </div>
+            <div className="sub-info-text">
+              <b>Wind-Speed : </b>
+              {c_wind[displayIndex]} km/s
+            </div>
 
             <div className="sub-info-text">
               <span className="max-temp">
                 <i className="mdi mdi-arrow-up" />
-                Max.Temp. =
-                {maxTemps[displayIndex]}
+                Max.Temp. ={maxTemps[displayIndex]}
                 °C
               </span>
               <span className="min-temp">
                 <i className="mdi mdi-arrow-down" />
-                Min.Temp. =
-                {minTemps[displayIndex]}
+                Min.Temp. ={minTemps[displayIndex]}
                 °C
               </span>
             </div>
           </div>
-        </div><hr />
+        </div>
+        <hr />
 
         <div className="selection-panel">
           <div className="selection-row">
@@ -315,51 +329,3 @@ class App extends React.Component {
 export default App;
 
 ReactDOM.render(<App />, document.getElementById("root"));
-
-
-// function Index() {
-//   return (
-//     <div class="w3-display-container w3-text-black">
-//       <h1>Current Weather</h1>
-//     <h3 class="w3-xlarge w3-display-bottomleft w3-padding">LONDON 60&deg; F</h3>
-//     </div>
-//     );
-// }
-
-// function Details() {
-//   return <h2>Details</h2>;
-// }
-
-// function Hourly() {
-//   return <h2>Hourly</h2>;
-// }
-
-// function AppRouter() {
-//   return (
-//     <Router>
-//       <div>
-//         <nav>
-//           <ul className="ul">
-//             <li>
-//               <Link to="/">
-//               Current Weather
-//               </Link>
-//             </li>
-//             <li>
-//               <Link to="/Details/">Details</Link>
-//             </li>
-//             <li>
-//               <Link to="/Hourly/">Hourly</Link>
-//             </li>
-//           </ul>
-//         </nav>
-
-//         <Route path="/" exact component={Index} />
-//         <Route path="/Details/" component={Details} />
-//         <Route path="/Hourly/" component={Hourly} />
-//       </div>
-//     </Router>
-//   );
-// }
-
-// export default AppRouter;
